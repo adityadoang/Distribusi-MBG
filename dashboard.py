@@ -146,7 +146,7 @@ st.divider()
 # --- Tabel Detail ---
 st.markdown("#### Detail Data Provinsi")
 st.dataframe(
-    filtered_df.sort_values(by='stunting_pct', ascending=False).reset_index(drop=True),
+    filtered_df.sort_values(by='stunting_pct', ascending=False).reset_index(drop=True).rename(index=lambda x: x + 1),
     use_container_width=True,
     height=400
 )
